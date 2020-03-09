@@ -1,4 +1,3 @@
-# hello-world
-For Github tutorial
+# EDGE DIY Software
 
-rstudio::conf 2020 was amazing!
+A package implementing the CMS External Data Gathering Environment (EDGE) Server DIY algorithm
