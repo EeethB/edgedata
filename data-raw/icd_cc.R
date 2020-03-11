@@ -55,7 +55,7 @@ age_specs <- read_tsv(
   ) %>%
   select(-age)
 
-icd_cc <-tbl3 %>%
+icd_cc <- tbl3 %>%
   left_join(
     sex_specs,
     by = c("icd" = "icd")

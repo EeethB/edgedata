@@ -6,19 +6,20 @@ library(readxl)
 
 source("./data-raw/tables_path.R")
 
-tbl4_ <- read_excel(
+## Table 4
+tbl4 <- read_excel(
   tbl_path,
   sheet = "Table 4",
   range = "B3:D200"
 )
 
-colnames(tbl4_) <- c(
+colnames(tbl4) <- c(
   "cc",
   "set_0",
   "desc"
 )
 
-cc_hier <- tbl4_ %>%
+cc_hier <- tbl4 %>%
   separate(
     col = set_0,
     into = paste0("cond", 1:10),
