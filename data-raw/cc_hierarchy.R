@@ -2,19 +2,34 @@ library(readr)
 library(dplyr)
 library(stringr)
 library(tidyr)
+library(readxl)
 
-tbl4 <- read_tsv(
-  "./data-raw/SAS-software/V05128H1.txt",
-  col_names = c("text"),
-  col_types = "c"
-) %>%
-  slice(22:100) %>%
-  mutate(
-    cc_list = str_extract(tolower(text), "\\(([:digit:]|,|[ _])*\\)")
-  ) %>%
+source("./data-raw/tables_path.R")
+
+tbl4_ <- read_excel(
+  tbl_path,
+  sheet = "Table 4",
+  range = "B3:D200"
+)
+
+colnames(tbl4_) <- c(
+  "cc",
+  "set_0",
+  "desc"
+)
+
+cc_hier <- tbl4_ %>%
   separate(
-    col = cc_list,
-    into = paste0("cc", 1:5),
-    remove = FALSE
-  )
+    col = set_0,
+    into = paste0("cond", 1:10),
+    sep = " ,",
+    fill = "right"
+  ) %>%
+  pivot_longer(
+    cols = starts_with("cond"),
+    values_to = "set_0"
+  ) %>%
+  filter(!is.na(set_0)) %>%
+  select(-name)
 
+usethis::use_data(cc_hier)
