@@ -1,7 +1,4 @@
-library(readr)
 library(dplyr)
-library(stringr)
-library(tidyr)
 library(readxl)
 
 source("./data-raw/tables_path.R")
@@ -27,4 +24,4 @@ colnames(tbl9) <- c(
 coefs <- tbl9 %>%
   filter(!is.na(model))
 
-usethis::use_data(coefs)
+usethis::use_data(coefs, overwrite = TRUE)
