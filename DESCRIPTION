@@ -1,7 +1,7 @@
 Package: edgedata
 Type: Package
 Title: Datasets that support the EDGE Server DIY logic
-Version: 0.1.0
+Version: 0.0.0.9000
 Authors@R: person("Ethan", "Brockmann",
     email = "ethanbrockmann@gmail.com", role = c("aut", "cre"))
 Description: Datasets from https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index
@@ -10,3 +10,4 @@ Description: Datasets from https://www.cms.gov/cciio/Resources/Regulations-and-G
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.0.2

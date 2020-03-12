@@ -18,7 +18,7 @@ colnames(tbl10b) <- c(
   "hcpcs"
 )
 
-ndc_rxc <- tbl10b %>%
+hcpcs_rxc <- tbl10b %>%
   filter(str_length(rxc) <= 3)
 
-usethis::use_data(ndc_rxc, overwrite = TRUE)
+usethis::use_data(hcpcs_rxc, overwrite = TRUE)

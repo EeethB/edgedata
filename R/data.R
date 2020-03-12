@@ -6,7 +6,7 @@
 #'
 #' cpt_hcpcs.
 #'
-#' @format A tibble with ~7000 rows and 5 variables:
+#' @format A data frame with ~7000 rows and 5 variables:
 #' \describe{
 #'   \item{code}{CPT/HCPCS code}
 #'   \item{desc}{Short description of the code}
@@ -58,7 +58,6 @@
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 
 "hcpcs_rxc"
-
 
 
 #' Rx Condition Hierarchies - Table 11
