@@ -1,12 +1,10 @@
 #' RA-eligible CPT and HCPCS - Table 2
 #'
 #' A dataset containing the Current Procedural Terminology
-#' and Health Care Procedure Coding System codes that
-#' determine if a claim is eligible for Risk Adjustment
+#' (CPT) and Health Care Procedure Coding System (HCPCS)
+#' codes that determine if a claim is eligible for risk
+#' adjustment.
 #'
-#' cpt_hcpcs.
-#'
-#' @format A data frame with ~7000 rows and 5 variables:
 #' \describe{
 #'   \item{code}{CPT/HCPCS code}
 #'   \item{desc}{Short description of the code}
@@ -22,6 +20,18 @@
 
 #' ICD to Condition Category Crosswalk - Table 3
 #'
+#' A dataset containing the ICD-10 to condition category
+#' mappings.
+#'
+#' \describe{
+#'   \item{icd}{ICD-10 code}
+#'   \item{cc}{Risk adjustment condition category}
+#'   \item{class}{It's not yet clear how this is used}
+#'   \item{eff_date}{Effective date of ICD code}
+#'   \item{term_date}{Term date of ICD code}
+#'   \item{sex}{Male/Female specification for ICD code (Risk adjustment currently only supports male and female genders)}
+#'   \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
+#' }
 #'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 
@@ -30,8 +40,11 @@
 
 #' Condition Category Hierarchies - Table 4
 #'
+#' A dataset used to apply the risk adjustment condition
+#' category hierarchies.
 #'
-#' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' @source
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 
 "cc_hier"
 

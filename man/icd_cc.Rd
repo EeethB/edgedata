@@ -12,6 +12,18 @@
 icd_cc
 }
 \description{
-ICD to Condition Category Crosswalk - Table 3
+A dataset containing the ICD-10 to condition category
+mappings
+}
+\details{
+\describe{
+  \item{icd}{ICD-10 code}
+  \item{cc}{Risk adjustment condition category}
+  \item{class}{It's not yet clear how this is used}
+  \item{eff_date}{Effective date of ICD code}
+  \item{term_date}{Term date of ICD code}
+  \item{sex}{Male/Female specification for ICD code (Risk adjustment currently only supports male and female genders)}
+  \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
+}
 }
 \keyword{datasets}

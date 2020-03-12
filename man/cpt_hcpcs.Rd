@@ -4,14 +4,7 @@
 \name{cpt_hcpcs}
 \alias{cpt_hcpcs}
 \title{RA-eligible CPT and HCPCS - Table 2}
-\format{A data frame with ~7000 rows and 5 variables:
-\describe{
-  \item{code}{CPT/HCPCS code}
-  \item{desc}{Short description of the code}
-  \item{prior}{Whether or not the code was valid in the prior benefit year}
-  \item{curr}{Whether or not the code is valid in the current benefit year}
-  \item{footnote}{Any footnotes included in the CMS DIY file}
-}}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 6557 rows and 5 columns.}
 \source{
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 }
@@ -20,10 +13,17 @@ cpt_hcpcs
 }
 \description{
 A dataset containing the Current Procedural Terminology
-and Health Care Procedure Coding System codes that
-determine if a claim is eligible for Risk Adjustment
+(CPT and Health Care Procedure Coding System (HCPCS)
+codes that determine if a claim is eligible for risk
+adjustment
 }
 \details{
-cpt_hcpcs.
+\describe{
+  \item{code}{CPT/HCPCS code}
+  \item{desc}{Short description of the code}
+  \item{prior}{Whether or not the code was valid in the prior benefit year}
+  \item{curr}{Whether or not the code is valid in the current benefit year}
+  \item{footnote}{Any footnotes included in the CMS DIY file}
+}
 }
 \keyword{datasets}
