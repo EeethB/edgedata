@@ -4,7 +4,11 @@
 \name{cc_hier}
 \alias{cc_hier}
 \title{Condition Category Hierarchies - Table 4}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 149 rows and 3 columns.}
+\format{\describe{
+\item{cc}{HHS condition category code}
+\item{desc}{HHS condition category description}
+\item{set_0}{HHS condition category that falls below \code{cc} on the hierarchy}
+}}
 \source{
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 }
@@ -12,6 +16,9 @@
 cc_hier
 }
 \description{
-Condition Category Hierarchies - Table 4
+A dataset used to apply the risk adjustment condition category hierarchies.
+The HHS risk model uses \emph{hierarchichal} condition categories. This
+means that when an individual has e.g. HCC 8 (Metastatic Cancer), they do
+not also get the risk score for less serious cancer categories.
 }
 \keyword{datasets}

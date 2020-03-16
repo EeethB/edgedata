@@ -4,7 +4,15 @@
 \name{icd_cc}
 \alias{icd_cc}
 \title{ICD to Condition Category Crosswalk - Table 3}
-\format{An object of class \code{grouped_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 8528 rows and 11 columns.}
+\format{\describe{
+\item{icd}{ICD-10 code}
+\item{cc}{Risk adjustment condition category}
+\item{class}{It's not yet clear how this is used}
+\item{eff_date}{Effective date of ICD code}
+\item{term_date}{Term date of ICD code}
+\item{sex}{Male/Female specification for ICD code (Risk adjustment currently only supports male and female genders)}
+\item{sex_num}{Numeric sex encoding (1/M and 2/F)}
+}}
 \source{
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 }
@@ -13,17 +21,6 @@ icd_cc
 }
 \description{
 A dataset containing the ICD-10 to condition category
-mappings
-}
-\details{
-\describe{
-  \item{icd}{ICD-10 code}
-  \item{cc}{Risk adjustment condition category}
-  \item{class}{It's not yet clear how this is used}
-  \item{eff_date}{Effective date of ICD code}
-  \item{term_date}{Term date of ICD code}
-  \item{sex}{Male/Female specification for ICD code (Risk adjustment currently only supports male and female genders)}
-  \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
-}
+mappings.
 }
 \keyword{datasets}

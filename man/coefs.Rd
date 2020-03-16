@@ -4,7 +4,10 @@
 \name{coefs}
 \alias{coefs}
 \title{Model Coefficients - Table 9}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 379 rows and 8 columns.}
+\format{\describe{
+\item{model}{Adult, Child, or Infant model, which all have different
+variables and different coefficients}
+}}
 \source{
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 }
@@ -12,6 +15,9 @@
 coefs
 }
 \description{
-Model Coefficients - Table 9
+A dataset containing the risk adjustment coefficients. Risk varies by sex,
+age, enrollment duration, condition category, prescription drug category,
+and adult/child/infant status. There are also some drug/diagnosis
+interaction terms, and some "high risk" interaction terms.
 }
 \keyword{datasets}
