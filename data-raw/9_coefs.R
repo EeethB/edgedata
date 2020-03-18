@@ -2,6 +2,7 @@ library(dplyr)
 library(readxl)
 library(stringr)
 library(tidyr)
+library(usethis)
 
 source("./data-raw/tables_path.R")
 
@@ -28,13 +29,13 @@ tbl9_grp <- tbl9 %>%
   mutate(
     var_type = case_when(
       str_detect(var, "G[0-9]{1,2}") ~ "group",
+      str_detect(var, "X_SEVERITY") ~ "mat_sev",
       str_detect(var, "([MF]AGE_LAST)|(AGE[0-1])") ~ "demo",
       str_detect(var, "HHS_HCC") ~ "hcc",
       str_detect(var, "INT_GROUP_") ~ "interaction",
       str_detect(var, "ED_") ~ "enroll_dur",
       str_detect(var, "RXC_[0-9]{1,2}_X") ~ "rxc_hcc_inter",
       str_detect(var, "RXC_[0-9]{1,2}") ~ "rxc",
-      str_detect(var, "X_SEVERITY") ~ "inf",
       TRUE ~ "other"
     )
   ) %>%
@@ -50,6 +51,7 @@ names(group_list) <- group_names[[1]]
 
 attach(group_list)
 
+# Adult Model -----------------------------------------------------------------
 adult_demo <- adult_demo_ %>%
   mutate(
     sex = str_sub(var, 1, 1),
@@ -92,25 +94,47 @@ adult_rxc_hcc_inter <- adult_rxc_hcc_inter_ %>%
     values_to = "hcc"
   ) %>%
   filter(!is.na(hcc)) %>%
+  mutate(hcc = str_replace(hcc, "37", "37_")) %>%
+  select(-model, -var, -var_type, -name)
 
+# Child Model -----------------------------------------------------------------
+child_demo <- child_demo_ %>%
+  mutate(
+    sex = str_sub(var, 1, 1),
+    age_min = str_sub(var, 10, 12) %>% str_replace_all("_", ""),
+    age_max = str_sub(var, 13) %>% str_replace_all("_", "")
+  ) %>%
+  select(-model, -var, -var_type)
 
-  cc_hier <- tbl4 %>%
+child_group <- child_group_ %>%
+  select(-model, -var_type)
+
+child_hcc <- child_hcc_ %>%
+  mutate(hcc = str_sub(var, 8)) %>%
+  select(-model, -var, -var_type)
+
+# Infant Model ----------------------------------------------------------------
+infant_demo <- infant_demo_ %>%
+  mutate(
+    age = str_sub(var, 4, 4),
+    sex = case_when(
+      str_sub(var, 6) == "MALE" ~ "M",
+      TRUE ~ "F"
+    )
+  ) %>%
+  select(-model, -var, -var_type)
+
+infant_mat_sev <- infant_mat_sev_ %>%
   separate(
-    col = set_0,
-    into = paste0("cond", 1:10),
-    sep = " ,",
-    fill = "right"
+    col = var,
+    into = c("mat", "sev"),
+    sep = "_X_SEVERITY"
   ) %>%
-  pivot_longer(
-    cols = starts_with("cond"),
-    values_to = "set_0"
-  ) %>%
-  filter(!is.na(set_0)) %>%
-  select(-name)
+  select(-model, -var_type)
 
-adult_rxc_hcc_inter
-
-group_names
-
-usethis::use_data(adult_demo, adult_enroll_dur, adult_grup, adult_hcc,
-                  adult_interaction, adult_rxc)
+use_data(adult_demo, adult_enroll_dur, adult_group, adult_hcc,
+         adult_interaction, adult_rxc, adult_rxc_hcc_inter,
+         child_demo, child_group, child_hcc,
+         infant_demo, infant_mat_sev,
+         overwrite = TRUE
+         )

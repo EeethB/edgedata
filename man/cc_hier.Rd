@@ -7,7 +7,8 @@
 \format{\describe{
 \item{cc}{HHS condition category code}
 \item{desc}{HHS condition category description}
-\item{set_0}{HHS condition category that falls below \code{cc} on the hierarchy}
+\item{set_0}{HHS condition category that falls below \code{cc} on the
+hierarchy}
 }}
 \source{
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}

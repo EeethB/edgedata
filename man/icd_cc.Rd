@@ -10,7 +10,8 @@
 \item{class}{It's not yet clear how this is used}
 \item{eff_date}{Effective date of ICD code}
 \item{term_date}{Term date of ICD code}
-\item{sex}{Male/Female specification for ICD code (Risk adjustment currently only supports male and female genders)}
+\item{sex}{Male/Female specification for ICD code (Risk adjustment
+currently only supports male and female)}
 \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
 }}
 \source{

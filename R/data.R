@@ -79,7 +79,7 @@
 #'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 
-"coefs"
+"adult_hcc"
 
 
 #' NDC to Rx Condition Crosswalk - Table 10a
