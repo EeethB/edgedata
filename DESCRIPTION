@@ -5,8 +5,8 @@ Version: 0.0.0.9000
 Authors@R: person("Ethan", "Brockmann",
     email = "ethanbrockmann@gmail.com", role = c("aut", "cre", "cph"))
 Description: Datasets from https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index
-    in a tidy format. This will be used to support an EDGE
-    DIY package in the future.
+    in a tidy format. These support the CMS EDGE DIY process used for
+    calculating risk adjustment risk scores.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
