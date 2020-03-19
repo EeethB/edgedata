@@ -4,7 +4,7 @@ library(stringr)
 library(tidyr)
 library(usethis)
 
-source("./data-raw/tables_path.R")
+source("./data-raw/00_tables_path.R")
 
 ## Table 9
 tbl9 <- read_excel(

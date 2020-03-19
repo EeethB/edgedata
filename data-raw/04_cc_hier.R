@@ -4,7 +4,7 @@ library(stringr)
 library(tidyr)
 library(readxl)
 
-source("./data-raw/tables_path.R")
+source("./data-raw/00_tables_path.R")
 
 ## Table 4
 tbl4 <- read_excel(
@@ -33,4 +33,4 @@ cc_hier <- tbl4 %>%
   filter(!is.na(set_0)) %>%
   select(-name)
 
-usethis::use_data(cc_hier)
+usethis::use_data(cc_hier, overwrite = TRUE)

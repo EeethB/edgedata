@@ -1,10 +1,13 @@
+# Not currently used
+# I think processing this table will be better done in edgediy
+
 library(readr)
 library(dplyr)
 library(stringr)
 library(tidyr)
 library(readxl)
 
-source("./data-raw/tables_path.R")
+source("./data-raw/00_tables_path.R")
 
 ## Table 6
 tbl6 <- read_excel(
@@ -20,6 +23,5 @@ colnames(tbl6) <- c(
 )
 
 div <- c(
-  "Adult.G01.HCC group (0/1)",
-
+  "Adult.G01.HCC group (0/1)"
 )

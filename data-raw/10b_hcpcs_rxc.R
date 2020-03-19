@@ -2,7 +2,7 @@ library(dplyr)
 library(readxl)
 library(stringr)
 
-source("./data-raw/tables_path.R")
+source("./data-raw/00_tables_path.R")
 
 ## Table 10b
 tbl10b <- read_excel(

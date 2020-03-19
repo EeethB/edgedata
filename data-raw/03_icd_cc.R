@@ -2,10 +2,11 @@ library(dplyr)
 library(stringr)
 library(readr)
 library(lubridate)
+library(tidyr)
 
 ## Table 3
 tbl3_19 <- read_tsv(
-  "./data-raw/SAS-software/H0520F1.FY 2019 ICD10.txt",
+  "./data-raw/SAS/H0520F1.FY 2019 ICD10.txt",
   col_names = c("icd", "cc", "class"),
   col_types = "ccc"
 ) %>%
@@ -15,7 +16,7 @@ tbl3_19 <- read_tsv(
   )
 
 tbl3_20 <- read_tsv(
-  "./data-raw/SAS-software/H0520F1.FY 2020 ICD10.txt",
+  "./data-raw/SAS/H0520F1.FY 2020 ICD10.txt",
   col_names = c("icd", "cc", "class"),
   col_types = "ccc"
 ) %>%
