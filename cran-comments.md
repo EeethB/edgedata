@@ -1,6 +1,6 @@
 ## Test environments
 * local Windows 8 install, R 3.6.2
-* Ubuntu (on travis-ci), R 3.6.2
+* Ubuntu (on travis-ci), R 3.6
 
 ## R CMD check results
 There were no ERRORs, WARNINGs, or NOTEs
