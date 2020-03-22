@@ -1,5 +1,9 @@
 # EDGE DIY Data
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/arcticondor/edgedata.svg?branch=master)](https://travis-ci.org/arcticondor/edgedata)
+<!-- badges: end -->
+
 ## Summary
 
 A package containing the data that supports the CMS External Data Gathering Environment (EDGE) Server DIY algorithm
