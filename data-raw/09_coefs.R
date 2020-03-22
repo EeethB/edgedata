@@ -58,13 +58,15 @@ adult_demo <- adult_demo_ %>%
     age_min = str_sub(var, 11, 12),
     age_max = str_sub(str_replace(var, "GT", "999"), 14)
   ) %>%
-  select(-model, -var, -var_type)
+  select(-model, -var, -var_type) %>%
+  as_tibble()
 
 adult_enroll_dur <- adult_enroll_dur_ %>%
   mutate(months = str_sub(var, 4,)) %>%
   select(-model, -var, -var_type)
 
 adult_group <- adult_group_ %>%
+  rename(group = var) %>%
   select(-model, -var_type)
 
 adult_hcc <- adult_hcc_ %>%
@@ -72,6 +74,7 @@ adult_hcc <- adult_hcc_ %>%
   select(-model, -var, -var_type)
 
 adult_interaction <- adult_interaction_ %>%
+  rename(int_group = var) %>%
   select(-model, -var_type)
 
 adult_rxc <- adult_rxc_ %>%
@@ -107,6 +110,7 @@ child_demo <- child_demo_ %>%
   select(-model, -var, -var_type)
 
 child_group <- child_group_ %>%
+  rename(group = var) %>%
   select(-model, -var_type)
 
 child_hcc <- child_hcc_ %>%

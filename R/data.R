@@ -15,14 +15,11 @@
 #' }
 #'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
 "cpt_hcpcs"
-
 
 #' ICD to Condition Category Crosswalk - Table 3
 #'
-#' A dataset containing the ICD-10 to condition category
-#' mappings.
+#' A dataset containing the ICD-10 to condition category mappings.
 #'
 #' @format
 #' \describe{
@@ -36,10 +33,10 @@
 #'   \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
 #' }
 #'
+#' @family crosswalks
+#'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
 "icd_cc"
-
 
 #' Condition Category Hierarchies - Table 4
 #'
@@ -58,49 +55,44 @@
 #'
 #' @source
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
 "cc_hier"
-
-
-#' Model Coefficients - Table 9
-#'
-#' A dataset containing the risk adjustment coefficients. Risk varies by sex,
-#' age, enrollment duration, condition category, prescription drug category,
-#' and adult/child/infant status. There are also some drug/diagnosis
-#' interaction terms, and some "high risk" interaction terms.
-#'
-#' @format
-#' \describe{
-#'   \item{model}{Adult, Child, or Infant model, which all have different
-#'                variables and different coefficients}
-#'   \item{var}{Name of the variable in the CMS DIY software. This variable
-#'              encodes every direction that risk can vary}
-#' }
-#'
-#' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
-"adult_hcc"
-
 
 #' NDC to Rx Condition Crosswalk - Table 10a
 #'
+#' A dataset containing the NDC to Rx condition mappings.
+#'
+#' \describe{
+#'   \item{rxc}{Rx condition number without leading zeroes}
+#'   \item{desc}{Rx condition description}
+#'   \item{ndc}{NDC that maps to `rxc`}
+#' }
+#'
+#' @family crosswalks
 #'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
 "ndc_rxc"
-
 
 #' HCPCS to Rx Condition Crosswalk - Table 10b
 #'
+#' A dataset containing the HCPCS to Rx condition mappings.
+#'
+#' \describe{
+#'   \item{rxc}{Rx condition number without leading zeroes}
+#'   \item{desc}{Rx condition description}
+#'   \item{ndc}{HCPCS code that maps to `rxc`}
+#' }
+#'
+#' @family crosswalks
 #'
 #' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
-
 "hcpcs_rxc"
-
 
 #' Rx Condition Hierarchies - Table 11
 #'
-#'
-#' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' A dataset used to apply the risk adjustment Rx condition category
+#' hierarchies. The HHS risk model uses *hierarchichal* condition categories.
+#' This means that when an individual has e.g. RXC 6 (Insulin), they do not also
+#' get the risk score for RXC 7 (Anti-Diabetic Agents, Except Insulin...).
 
+#' @source \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 "rxc_hier"
