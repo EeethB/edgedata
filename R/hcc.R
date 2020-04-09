@@ -4,7 +4,13 @@
 #' Procedure Coding System (HCPCS) codes that determine if a claim is eligible
 #' for risk adjustment.
 #'
+#' Risk adjustment requires that claims be face-to-face. The codes in this
+#' dataset denote a face-to-face procedure, so if one of these codes is found
+#' anywhere on a claim, it counts for risk adjustment.
+#'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   6557 rows and 8 columns
 #' \describe{
 #'   \item{code}{CPT/HCPCS code}
 #'   \item{desc}{Short description of the code}
@@ -18,13 +24,24 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "cpt_hcpcs"
 
 #' ICD to Condition Category Crosswalk - Table 3
 #'
 #' A dataset containing the ICD-10 to condition category mappings.
 #'
+#' The ICD-10 system is a vast diagnosis coding system in healthcare. The
+#' Centers for Medicare and Medicaid Services (CMS) in the USA performed a
+#' regression of healthcare cost onto diagnosis code. But since there are so
+#' many diagnoses, and they very specific, they grouped similar codes into
+#' broader condition categories. Additionally, some diagnoses can only apply to
+#' one sex or the other, or to a particular age range.
+#'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   8528 rows and 11 columns
 #' \describe{
 #'   \item{icd}{ICD-10 code}
 #'   \item{cc}{Risk adjustment condition category}
@@ -34,12 +51,22 @@
 #'   \item{sex}{Male/Female specification for ICD code (Risk adjustment
 #'              currently only supports male and female)}
 #'   \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
+#'   \item{model_num}{Number corresponding to model: 0 = newborn, 1 = pediatric
+#'                    2 = maternity, 3 = adult}
+#'   \item{model}{Which regression model the age/sex filters apply to - Includes
+#'                maternity, which is not used in actual score calculations}
+#'   \item{age_min}{Minimum age for a given diagnosis code}
+#'   \item{age_max}{Maximum age for a given diagnosis code}
 #' }
 #'
 #' @family crosswalks
 #' @family HCC tables
 #'
-#' @source #' Most recent DIY entry at: #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' @source
+#' Most recent DIY entry at:
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "icd_cc"
 
 #' Condition Category Hierarchies - Table 4
@@ -50,6 +77,8 @@
 #' the risk score for less serious cancer categories.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   149 rows and 3 columns
 #' \describe{
 #'   \item{cc}{Condition category code without leading zeroes}
 #'   \item{desc}{Condition category description}
@@ -62,4 +91,6 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "cc_hier"

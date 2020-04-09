@@ -4,7 +4,9 @@
 \name{cc_hier}
 \alias{cc_hier}
 \title{Condition Category Hierarchies - Table 4}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+149 rows and 3 columns
+\describe{
 \item{cc}{Condition category code without leading zeroes}
 \item{desc}{Condition category description}
 \item{set_0}{Condition category that falls below \code{cc} on the hierarchy.

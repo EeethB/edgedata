@@ -4,7 +4,9 @@
 \name{cpt_hcpcs}
 \alias{cpt_hcpcs}
 \title{RA-eligible CPT and HCPCS - Table 2}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+6557 rows and 8 columns
+\describe{
 \item{code}{CPT/HCPCS code}
 \item{desc}{Short description of the code}
 \item{prior}{Whether or not the code was valid in the prior benefit year}

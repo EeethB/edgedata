@@ -36,7 +36,7 @@ tbl3 <- bind_rows(
   )
 
 sex_specs <- read_tsv(
-  "./data-raw/SAS-software/H0520F1_ICD10_MCE_SEX.txt",
+  "./data-raw/SAS/H0520F1_ICD10_MCE_SEX.txt",
   col_names = c("icd", "sex"),
   col_types = "cc"
 ) %>%
@@ -46,7 +46,7 @@ sex_specs <- read_tsv(
   )
 
 age_specs <- read_tsv(
-  "./data-raw/SAS-software/H0520F1_ICD10_MCE_AGE.txt",
+  "./data-raw/SAS/H0520F1_ICD10_MCE_AGE.txt",
   col_names = c("icd", "specs"),
   col_types = "cc"
 ) %>%
@@ -64,6 +64,7 @@ icd_cc <- tbl3 %>%
   left_join(
     age_specs,
     by = c("icd" = "icd")
-  )
+  ) %>%
+  ungroup()
 
 usethis::use_data(icd_cc, overwrite = TRUE)

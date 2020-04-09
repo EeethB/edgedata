@@ -4,6 +4,8 @@
 #' adjustment model. Demographics vary by age (groupings) and sex.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   18 rows and 9 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
@@ -17,6 +19,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_demo"
 
 #' Adult Enrollment Duration Factors - Table 9
@@ -27,6 +31,8 @@
 #' diagnoses and prescriptions during the enrollment window.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   11 rows and 7 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{Enrollment duration risk score for
@@ -39,6 +45,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_enroll_dur"
 
 #' Adult HCC Factors - Table 9
@@ -49,6 +57,8 @@
 #' \code{\link{cc_hier}}), creating hierarchical condition categories (HCCs).
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   128 rows and 7 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
@@ -62,6 +72,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_hcc"
 
 #' Adult HCC Grouping Factors - Table 9
@@ -72,6 +84,8 @@
 #' group.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   17 rows and 7 columns
 #' \describe{
 #'   \item{group}{Group label for risk scores}
 #'   \item{used}{Whether or not the category is used in the RA model}
@@ -85,6 +99,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_group"
 
 #' Adult Interaction Factors - Table 9
@@ -95,6 +111,8 @@
 #' interaction term is added to the risk score.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   2 rows and 7 columns
 #' \describe{
 #'   \item{int_group}{Interaction group (M/H)}
 #'   \item{used}{Whether or not the category is used in the RA model}
@@ -108,6 +126,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_interaction"
 
 #' Adult Rx Condition Factors - Table 9
@@ -119,6 +139,8 @@
 #' \code{\link{rxc_hier}}).
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   10 rows and 7 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
@@ -132,6 +154,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_rxc"
 
 #' Adult RXC/HCC Interaction Factors - Table 9
@@ -142,8 +166,10 @@
 #' overstated. Other drugs combined with conditions indicate a greater severity
 #' than either the drug or the condition alone, so risk is understated. The
 #' RXC/HCC interaction factors make these adjustments.
-
+#'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   32 rows and 8 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
@@ -159,4 +185,6 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_rxc_hcc_inter"

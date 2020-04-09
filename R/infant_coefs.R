@@ -4,6 +4,8 @@
 #' adjustment model. Demographics vary by age and sex.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   2 rows and 8 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
@@ -17,6 +19,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "infant_demo"
 
 #' Infant Maturity/Severity Factors - Table 9
@@ -29,6 +33,8 @@
 #' were born. There is also a maturity category for age 1.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   25 rows and 8 columns
 #' \describe{
 #'   \item{mat}{Infant maturity level. Can be extremely immature, immature,
 #'              premature multiples, term, or age 1}
@@ -43,4 +49,6 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "infant_mat_sev"

@@ -4,7 +4,9 @@
 \name{icd_cc}
 \alias{icd_cc}
 \title{ICD to Condition Category Crosswalk - Table 3}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+8528 rows and 11 columns
+\describe{
 \item{icd}{ICD-10 code}
 \item{cc}{Risk adjustment condition category}
 \item{class}{It's not yet clear how this is used}
@@ -15,7 +17,8 @@ currently only supports male and female)}
 \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
 }}
 \source{
-#' Most recent DIY entry at: #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Most recent DIY entry at:
+\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
 }
 \usage{
 icd_cc

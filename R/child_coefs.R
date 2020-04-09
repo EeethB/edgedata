@@ -4,6 +4,8 @@
 #' adjustment model. Demographics vary by age (groupings) and sex.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   8 rows and 9 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
@@ -17,6 +19,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_demo"
 
 #' Child HCC Factors - Table 9
@@ -27,6 +31,8 @@
 #' \code{\link{cc_hier}}), creating hierarchical condition categories (HCCs).
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   128 rows and 7 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
 #'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
@@ -40,6 +46,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_hcc"
 
 #' Child HCC Grouping Factors - Table 9
@@ -50,6 +58,8 @@
 #' group.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   17 rows and 7 columns
 #' \describe{
 #'   \item{group}{Group label for risk scores}
 #'   \item{used}{Whether or not the category is used in the RA model}
@@ -63,4 +73,6 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_group"

@@ -3,6 +3,8 @@
 #' A dataset containing the NDC to Rx condition mappings.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   12323 rows and 3 columns
 #' \describe{
 #'   \item{rxc}{Rx condition number without leading zeroes}
 #'   \item{desc}{Rx condition description}
@@ -15,6 +17,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "ndc_rxc"
 
 #' HCPCS to Rx Condition Crosswalk - Table 10b
@@ -22,6 +26,8 @@
 #' A dataset containing the HCPCS to Rx condition mappings.
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   43 rows and 3 columns
 #' \describe{
 #'   \item{rxc}{Rx condition number without leading zeroes}
 #'   \item{desc}{Rx condition description}
@@ -34,6 +40,8 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "hcpcs_rxc"
 
 #' Rx Condition Hierarchies - Table 11
@@ -44,6 +52,8 @@
 #' get the risk score for RXC 7 (Anti-Diabetic Agents, Except Insulin...).
 #'
 #' @format
+#' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
+#'   1 rows and 3 columns
 #' \describe{
 #'   \item{rxc}{Rx condition code without leading zeroes}
 #'   \item{desc}{Rx condition code description}
@@ -56,4 +66,6 @@
 #' @source
 #' Most recent DIY entry at:
 #' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' Data import and cleaning at:
+#' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "rxc_hier"
