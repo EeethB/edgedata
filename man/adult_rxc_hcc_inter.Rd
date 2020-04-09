@@ -4,7 +4,9 @@
 \name{adult_rxc_hcc_inter}
 \alias{adult_rxc_hcc_inter}
 \title{Adult RXC/HCC Interaction Factors - Table 9}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+32 rows and 8 columns
+\describe{
 \item{used}{Whether or not the category is used in the RA model}
 \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
 metal level}
@@ -14,6 +16,8 @@ metal level}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 adult_rxc_hcc_inter

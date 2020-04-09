@@ -4,7 +4,9 @@
 \name{child_demo}
 \alias{child_demo}
 \title{Child Demographic Factors - Table 9}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+8 rows and 9 columns
+\describe{
 \item{used}{Whether or not the category is used in the RA model}
 \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
 metal level}
@@ -14,6 +16,8 @@ metal level}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 child_demo

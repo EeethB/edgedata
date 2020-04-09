@@ -4,7 +4,9 @@
 \name{ndc_rxc}
 \alias{ndc_rxc}
 \title{NDC to Rx Condition Crosswalk - Table 10a}
-\format{\describe{
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+12323 rows and 3 columns
+\describe{
 \item{rxc}{Rx condition number without leading zeroes}
 \item{desc}{Rx condition description}
 \item{ndc}{NDC that maps to \code{rxc}}
@@ -12,6 +14,8 @@
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 ndc_rxc

@@ -15,6 +15,8 @@ No leading zeroes}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 cc_hier

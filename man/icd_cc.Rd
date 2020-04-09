@@ -15,16 +15,32 @@
 \item{sex}{Male/Female specification for ICD code (Risk adjustment
 currently only supports male and female)}
 \item{sex_num}{Numeric sex encoding (1/M and 2/F)}
+\item{model_num}{Number corresponding to model: 0 = newborn, 1 = pediatric
+2 = maternity, 3 = adult}
+\item{model}{Which regression model the age/sex filters apply to - Includes
+maternity, which is not used in actual score calculations}
+\item{age_min}{Minimum age for a given diagnosis code}
+\item{age_max}{Maximum age for a given diagnosis code}
 }}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 icd_cc
 }
 \description{
 A dataset containing the ICD-10 to condition category mappings.
+}
+\details{
+The ICD-10 system is a vast diagnosis coding system in healthcare. The
+Centers for Medicare and Medicaid Services (CMS) in the USA performed a
+regression of healthcare cost onto diagnosis code. But since there are so
+many diagnoses, and they very specific, they grouped similar codes into
+broader condition categories. Additionally, some diagnoses can only apply to
+one sex or the other, or to a particular age range.
 }
 \seealso{
 Other crosswalks: 

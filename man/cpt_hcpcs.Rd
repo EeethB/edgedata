@@ -16,6 +16,8 @@
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+Data import and cleaning at:
+\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
 \usage{
 cpt_hcpcs
@@ -24,6 +26,11 @@ cpt_hcpcs
 A dataset containing the Current Procedural Terminology (CPT) and Health Care
 Procedure Coding System (HCPCS) codes that determine if a claim is eligible
 for risk adjustment.
+}
+\details{
+Risk adjustment requires that claims be face-to-face. The codes in this
+dataset denote a face-to-face procedure, so if one of these codes is found
+anywhere on a claim, it counts for risk adjustment.
 }
 \seealso{
 Other HCC tables: 
