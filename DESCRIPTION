@@ -21,7 +21,7 @@ Description: Datasets from (Excel download)
   the data submission deadline. These data sets can be used by issuers to
   calculate their average risk score mid-year. More information about risk
   adjustment and the HHS-HCC model can be found here:
-  <https://www.cms.gov/mmrr/Articles/A2014/MMRR2014_004_03_a03.html>
+  <https://www.cms.gov/mmrr/Articles/A2014/MMRR2014_004_03_a03.html>.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
