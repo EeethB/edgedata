@@ -14,7 +14,7 @@ No leading zeroes}
 }}
 \source{
 Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
 \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
@@ -23,7 +23,7 @@ cc_hier
 }
 \description{
 A dataset used to apply the risk adjustment condition category hierarchies.
-The HHS risk model uses \emph{hierarchichal} condition categories. This means that
+The HHS-Hcc risk model uses \emph{hierarchichal} condition categories. This means that
 when an individual has e.g. HCC 8 (Metastatic Cancer), they do not also get
 the risk score for less serious cancer categories.
 }

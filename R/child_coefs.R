@@ -18,7 +18,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_demo"
@@ -45,7 +45,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_hcc"
@@ -72,7 +72,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "child_group"

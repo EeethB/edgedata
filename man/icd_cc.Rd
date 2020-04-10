@@ -24,7 +24,7 @@ maternity, which is not used in actual score calculations}
 }}
 \source{
 Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
 \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
@@ -35,12 +35,10 @@ icd_cc
 A dataset containing the ICD-10 to condition category mappings.
 }
 \details{
-The ICD-10 system is a vast diagnosis coding system in healthcare. The
-Centers for Medicare and Medicaid Services (CMS) in the USA performed a
-regression of healthcare cost onto diagnosis code. But since there are so
-many diagnoses, and they very specific, they grouped similar codes into
-broader condition categories. Additionally, some diagnoses can only apply to
-one sex or the other, or to a particular age range.
+The ICD-10 system is a vast diagnosis coding system in healthcare. But since
+there are so many diagnoses, and they very specific, the HHS-HCC model groups
+similar codes into broader condition categories. Additionally, some diagnoses
+can only apply to one sex or the other, or to a particular age range.
 }
 \seealso{
 Other crosswalks: 

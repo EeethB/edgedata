@@ -18,7 +18,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_demo"
@@ -44,7 +44,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_enroll_dur"
@@ -71,7 +71,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_hcc"
@@ -98,7 +98,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_group"
@@ -125,7 +125,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_interaction"
@@ -153,7 +153,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_rxc"
@@ -184,7 +184,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "adult_rxc_hcc_inter"

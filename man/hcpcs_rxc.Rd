@@ -13,7 +13,7 @@
 }}
 \source{
 Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
 \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
@@ -22,6 +22,11 @@ hcpcs_rxc
 }
 \description{
 A dataset containing the HCPCS to Rx condition mappings.
+}
+\details{
+HCPCS codes create a system for identifying drugs given in a medical setting. But since
+there are so many drugs, and they very specific, the HHS-HCC model groups
+similar drugs into broader Rx condition categories.
 }
 \seealso{
 Other crosswalks: 

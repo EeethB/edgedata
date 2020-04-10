@@ -4,9 +4,9 @@
 #' Procedure Coding System (HCPCS) codes that determine if a claim is eligible
 #' for risk adjustment.
 #'
-#' Risk adjustment requires that claims be face-to-face. The codes in this
-#' dataset denote a face-to-face procedure, so if one of these codes is found
-#' anywhere on a claim, it counts for risk adjustment.
+#' Risk adjustment requires that claims be face-to-face to count in the HHS-HCC
+#' model. The codes in this dataset denote a face-to-face procedure, so if one
+#' of these codes is found anywhere on a claim, it counts for risk adjustment.
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
@@ -23,7 +23,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "cpt_hcpcs"
@@ -32,12 +32,10 @@
 #'
 #' A dataset containing the ICD-10 to condition category mappings.
 #'
-#' The ICD-10 system is a vast diagnosis coding system in healthcare. The
-#' Centers for Medicare and Medicaid Services (CMS) in the USA performed a
-#' regression of healthcare cost onto diagnosis code. But since there are so
-#' many diagnoses, and they very specific, they grouped similar codes into
-#' broader condition categories. Additionally, some diagnoses can only apply to
-#' one sex or the other, or to a particular age range.
+#' The ICD-10 system is a vast diagnosis coding system in healthcare. But since
+#' there are so many diagnoses, and they very specific, the HHS-HCC model groups
+#' similar codes into broader condition categories. Additionally, some diagnoses
+#' can only apply to one sex or the other, or to a particular age range.
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
@@ -64,7 +62,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "icd_cc"
@@ -72,7 +70,7 @@
 #' Condition Category Hierarchies - Table 4
 #'
 #' A dataset used to apply the risk adjustment condition category hierarchies.
-#' The HHS risk model uses *hierarchichal* condition categories. This means that
+#' The HHS-Hcc risk model uses *hierarchichal* condition categories. This means that
 #' when an individual has e.g. HCC 8 (Metastatic Cancer), they do not also get
 #' the risk score for less serious cancer categories.
 #'
@@ -90,7 +88,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
 #' \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 "cc_hier"

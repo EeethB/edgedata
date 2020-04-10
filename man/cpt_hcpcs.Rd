@@ -15,7 +15,7 @@
 }}
 \source{
 Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index}
+\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
 \url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
 }
@@ -28,9 +28,9 @@ Procedure Coding System (HCPCS) codes that determine if a claim is eligible
 for risk adjustment.
 }
 \details{
-Risk adjustment requires that claims be face-to-face. The codes in this
-dataset denote a face-to-face procedure, so if one of these codes is found
-anywhere on a claim, it counts for risk adjustment.
+Risk adjustment requires that claims be face-to-face to count in the HHS-HCC
+model. The codes in this dataset denote a face-to-face procedure, so if one
+of these codes is found anywhere on a claim, it counts for risk adjustment.
 }
 \seealso{
 Other HCC tables: 
