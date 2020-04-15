@@ -30,3 +30,4 @@ Roxygen: list(markdown = TRUE)
 Depends:
   R (>= 3.6)
 
+Push from terminal
