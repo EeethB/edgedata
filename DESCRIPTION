@@ -11,7 +11,7 @@ Description: Datasets from (Excel download)
   in a tidy format. These support the Centers for Medicare and Medicaid
   Services' (CMS) risk adjustment Do-It-Yourself (DIY) process, which allows
   health insurance issuers to calculate member risk profiles under the Health
-  and Human Services-Hierarchichal Condition Categories (HHS-HCC) regression
+  and Human Services-Hierarchical Condition Categories (HHS-HCC) regression
   model. This regression model is used to calculate risk adjustment transfers.
   Risk adjustment is a selection mitigation program implemented under the
   Patient Protection and Affordable Care Act (ACA or Obamacare) in the USA.
