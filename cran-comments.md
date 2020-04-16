@@ -5,6 +5,7 @@ This is a resubmission. In this version I have:
 * Updated the weblinks and described what they contain
 * Explained all acronyms
 * Expanded dataset documentation
+* Corrected a mis-spelled word
 
 ## Test environments
 * local Windows 8 install, R 3.6.2
@@ -23,9 +24,8 @@ There was one NOTE:
     CMS (12:14, 18:65, 19:7, 20:12)
     DIY (3:46, 12:51)
     HCC (14:62, 19:51, 23:26)
-    Hierarchichal (14:22)
     
-  * All "mis-spelled" words are proper nouns or initialisms
+  * All "mis-spelled" words are initialisms
 
 ## Downstream dependencies
 This is a new package and has no downstream dependencies yet

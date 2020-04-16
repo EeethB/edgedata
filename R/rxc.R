@@ -55,7 +55,7 @@
 #' Rx Condition Hierarchies - Table 11
 #'
 #' A dataset used to apply the risk adjustment Rx condition category
-#' hierarchies. The HHS risk model uses *hierarchichal* condition categories.
+#' hierarchies. The HHS risk model uses *hierarchical* condition categories.
 #' This means that when an individual has e.g. RXC 6 (Insulin), they do not also
 #' get the risk score for RXC 7 (Anti-Diabetic Agents, Except Insulin...).
 #'

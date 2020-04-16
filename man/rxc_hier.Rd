@@ -23,7 +23,7 @@ rxc_hier
 }
 \description{
 A dataset used to apply the risk adjustment Rx condition category
-hierarchies. The HHS risk model uses \emph{hierarchichal} condition categories.
+hierarchies. The HHS risk model uses \emph{hierarchical} condition categories.
 This means that when an individual has e.g. RXC 6 (Insulin), they do not also
 get the risk score for RXC 7 (Anti-Diabetic Agents, Except Insulin...).
 }

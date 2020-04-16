@@ -23,7 +23,7 @@ cc_hier
 }
 \description{
 A dataset used to apply the risk adjustment condition category hierarchies.
-The HHS-Hcc risk model uses \emph{hierarchichal} condition categories. This means that
+The HHS-Hcc risk model uses \emph{hierarchical} condition categories. This means that
 when an individual has e.g. HCC 8 (Metastatic Cancer), they do not also get
 the risk score for less serious cancer categories.
 }
