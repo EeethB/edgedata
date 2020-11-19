@@ -4,9 +4,23 @@
 [![Travis build status](https://travis-ci.org/arcticondor/edgedata.svg?branch=master)](https://travis-ci.org/ArctiCondor/edgedata)
 <!-- badges: end -->
 
+## Installation
+
+`edgedata` can be installed from CRAN:
+
+```
+install.packages("edgedata")
+```
+
+You can also get the development version from Github:
+
+```
+remotes::install_github("EeethB/edgedata")
+```
+
 ## Summary
 
-A package containing the data that supports the CMS External Data Gathering Environment (EDGE) Server DIY algorithm
+An R package containing the data that supports the CMS External Data Gathering Environment (EDGE) Server DIY algorithm
 
 ## Background
 
