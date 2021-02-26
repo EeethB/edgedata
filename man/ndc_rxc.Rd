@@ -14,10 +14,8 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 }
 }
 \source{
-Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance} \cr
 Data import and cleaning at:
-\url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 }
 \usage{
 ndc_rxc

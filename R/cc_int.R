@@ -14,10 +14,8 @@
 #' @family Severe interaction tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "cc_severe"
 
 #' HCC to interaction group "M" mapping - Table 6
@@ -40,10 +38,8 @@
 #' @family Severe interaction tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "cc_int_m"
 
 #' HCC to interaction group "H" mapping - Table 6
@@ -66,8 +62,6 @@
 #' @family Severe interaction tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "cc_int_h"
