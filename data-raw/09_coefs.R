@@ -34,7 +34,7 @@ tbl9_grp <- tbl9 %>%
       str_detect(var, "HHS_HCC") ~ "hcc",
       str_detect(var, "INT_GROUP_") ~ "interaction",
       str_detect(var, "ED_") ~ "enroll_dur",
-      str_detect(var, "RXC_[0-9]{1,2}_X") ~ "rxc_hcc_inter",
+      str_detect(var, "RXC_[0-9]{1,2}_[Xx]") ~ "rxc_hcc_inter",
       str_detect(var, "RXC_[0-9]{1,2}") ~ "rxc",
       TRUE ~ "other"
     )
