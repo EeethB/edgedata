@@ -47,6 +47,8 @@ group_names <- group_keys(tbl9_grp) %>%
   mutate(name = paste(tolower(model), var_type, "", sep = "_")) %>%
   select(name)
 
+testthat::expect_equal(length(group_list), nrow(group_names))
+
 names(group_list) <- group_names[[1]]
 
 attach(group_list)
