@@ -1,8 +1,7 @@
-%MACRO I0V05ED3(AGERTI=, AGEMCE=, SEX=, ICD0= );
+%MACRO I0V05ED4(AGERTI=, AGEMCE=, SEX=, ICD0= );
  **********************************************************************
- 1 MACRO NAME: I0V05ED3: updated I0V05ED2 
-               UDXG update V0120 for V05 HHS model
-               ICD10 codes valid in FY2019 or FY2020.
+ 1 MACRO NAME: I0V05ED4: updated I0V05ED3 
+               UDXG update V0221 for V05 HHS model
                
  2 PURPOSE:    age/sex edits on &ICD0 - are based on:
                1. RTI age/sex splits
@@ -14,23 +13,25 @@
                AGEMCE- age for MCE edits (=AGE_AT_DIAGNOSIS)
                SEX   - SEX
                &ICD0  - diagnosis variable in a diagnosis file
- 4 COMMENTS:   1.Age format AGEFMT0 and sex format SEXFMT0 are
+ 4 COMMENTS:   
+               1.Age format AGEFMT0 and sex format SEXFMT0 are
                  parameters in the main macro. They must correspond
                  to the years of data
                2.If &ICD0 code does not have any restriction on age
                  or sex then the corresponding format puts it in "-1"
-               3.AGEL format sets lower limits for age
-                 AGEU format sets upper limit for age
+               3.Changes in format names 
+                 AGE_2020_L format sets lower limits for age
+                 AGE_2020_U format sets upper limit for age
                  for specific edit categories:
                  "0"= "0 newborn (age 0)     "
                  "1"= "1 pediatric (age 0-17)"
                  "2"= "2 maternity (age 9-64)" changed in FY20 from 12-55
-                 "3"= "3 adult (age 15+)     "
-               4.Macro sent via email verified using output from
-                 master_UDXGV0120_hhs_HCCV05_SoftEditMacroPrep.sas
-                 NB!! UDXGV0120 has the same RTI edits as before, 
-                 two ICD10 codes are now being dropped as no longer 
-                 valid.
+                 "3"= "3 adult (age 15+)     "   
+               4. Previous Macro is changed using output from 
+                  master_UDXGV0221_hhs_HCCV05_SoftEditMacroPrep.sas
+	                 RTI age edit newly applied to 18 newborn Z codes
+               5. ICD10 for payment HCCs only are present in the macro 
+
  **********************************************************************;
  * RTI age/sex splits;
  * codes are not cross-walked to CC if age condition is not met;
@@ -92,10 +93,13 @@
               "P0717","P0718","P0720","P0721","P0722","P0723",
               "P0724","P0725","P0726","P0730","P0731","P0732",
               "P0733","P0734","P0735","P0736","P0737","P0738",
-              "P0739","P080", "P081", "P0821","P0822" )
- THEN CC="-1.0" ; /*Edit for newborn low birthweight. 
+              "P0739","P080", "P081", "P0821","P0822",
+              "Z3800","Z3801","Z381", "Z382", "Z3830",
+              "Z3831","Z384", "Z385", "Z3861","Z3862",
+              "Z3863","Z3864","Z3865","Z3866","Z3868",
+              "Z3869","Z387", "Z388")
+ THEN CC="-1.0" ; /*Edit for newborn low birthweight or birth status. 
   If age 1+ out of payment model.*/
-
  ELSE
  IF &AGERTI >= 1  and
     &ICD0 IN ("Q894" )
@@ -136,13 +140,13 @@ ELSE
  * check if age is within acceptable range;
  _tage=put(&ICD0, $&AGEFMT0..);
  if _tage ne "-1" and
-  (&AGEMCE < input(put(_tage, $AGEL.),8.) or
-   &AGEMCE > input(put(_tage, $AGEU.),8.)) then cc="-1.0";
+  (&AGEMCE < input(put(_tage, $AGE_2020_L.),8.) or
+   &AGEMCE > input(put(_tage, $AGE_2020_U.),8.)) then cc="-1.0";
  * check if sex for a person is the one in the MCE file;
  _tsex=put(&ICD0, $&SEXFMT0..);
  if _tsex ne "-1"  and _tsex ne &SEX then cc="-1.0";
 
- %MEND I0V05ED3;
+ %MEND I0V05ED4;
 
 
 

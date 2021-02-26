@@ -273,7 +273,5 @@
  RXC_07="Anti-Diabetic Agents, Except Insulin and Metformin Only"
  RXC_08="Multiple Sclerosis Agents"
  RXC_09="Immune Suppressants and Immunomodulators"
- RXC_10="Cystic Fibrosis Agents"
- RXC_11="Ammonia Detoxicants"
- RXC_12="Diuretics, Loop and Select Potassium-Sparing";
+ RXC_10="Cystic Fibrosis Agents" ;
  %mend V05128L1;

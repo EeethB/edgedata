@@ -1,11 +1,11 @@
- %macro V0519F3M(INP=, IND=, INN=, INH=, OUTDATA=, 
+ %macro V0520F4M(INP=, IND=, INN=, INH=, OUTDATA=, 
                  IDVAR=, KEEPVAR=,
                  CCFMT0Y1=, CCFMT0Y2=, RXCFMTN=, RXCFMTH=, AGEFMT0=, SEXFMT0=,
-                 AGESEXMAC=AGESEXV6, I0EMACRO=I0V05ED3,
+                 AGESEXMAC=AGESEXV6, I0EMACRO=I0V05ED4,
                  LABELMAC=V05128L1,  HIERMAC=V05128H1,  SCOREMAC=SCOREV4);
 
  %**********************************************************************
- * V0519F3M creates HHS HCCs, RXCs and score variables for each enrollee
+ * V0520F4M creates HHS HCCs, RXCs and score variables for each enrollee
  * in the user-provided PERSON SAS dataset.
  *
  * If an enrollee has at least one diagnosis in the DIAG SAS dataset
@@ -24,13 +24,13 @@
  * i.e., the user must ensure that each dataset is sorted by the common identifier
  * named in macro variable &IDVAR.
  *
- * The PERSON SAS dataset must contain variables as noted in the comments for V0519F3P.
+ * The PERSON SAS dataset must contain variables as noted in the comments for V0520F4P.
  *
- * The DIAG SAS dataset must contain variables as noted in the comments for V0519F3P.
+ * The DIAG SAS dataset must contain variables as noted in the comments for V0520F4P.
  *
- * The NDC SAS dataset must contain variables as noted in the comments for V0519F3P.
+ * The NDC SAS dataset must contain variables as noted in the comments for V0520F4P.
  *
- * The HCPCS SAS dataset must contain variables as noted in the comments for V0519F3P.
+ * The HCPCS SAS dataset must contain variables as noted in the comments for V0520F4P.
  *
  * If an enrollee has N diagnoses, s/he will have N records in the DIAG dataset. If an
  *  enrollee has no diagnoses, s/he will have zero records in the DIAG dataset.
@@ -49,8 +49,9 @@
  *  OUTDATA  - SAS output SAS dataset
  *  IDVAR    - name of enrollee ID variable (e.g., Medicare HICNO)
  *  KEEPVAR  - variables in output dataset in addition to &IDVAR
- *  CCFMT0Y1 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for 2019 fiscal year
- *  CCFMT0Y2 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for 2020 fiscal year
+ *  CCFMT0Y1 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for 2020 fiscal year
+ *  CCFMT0Y2 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for 2021 fiscal year
+ *             will use 2020, until 2021 is available.
  *  RXCFMTN  - pointer to SAS formats that crosswalk NDCs to RXCs
  *  RXCFMTH  - pointer to SAS formats that crosswalk HCPCS to RXCs
  *  AGEFMT0  - pointer to SAS formats that crosswalk ICD10s to acceptable 
@@ -67,7 +68,7 @@
  *
  * External macros for this release:
  *  AGESEXV6    - (named in AGESEXMAC) creates age/sex variables
- *  I0V05ED3    - (named in I0EMACRO ) performs ICD10 diagnosis edits
+ *  I0V05ED4    - (named in I0EMACRO ) performs ICD10 diagnosis edits
  *  V05128L1    - (named in LABELMAC ) assigns labels to HHS HCCs and RXCs
  *  V05128H1    - (named in HIERMAC  ) applies HHS HCC hierarchy rules
  *  SCOREV4     - (named in SCOREMAC ) calculates score variables
@@ -111,7 +112,7 @@
 **==========================================================================================**;
 
 **==========================================================================================**;
-** I0V05ED3 goes here when testing macros inline;
+** I0V05ED4 goes here when testing macros inline;
 **==========================================================================================**;
 
 **==========================================================================================**;
@@ -144,12 +145,12 @@
 **===========================================================================**;
 ** if enrollee has any of these ICD10 diags and certain HHS_HCCs, it might   **;
 ** indicate a bundled claim -- infant diagnoses                              **;
-** uses format $BY&yy2.I from the format library                             **;
+** uses format $BY&yy1.I from the format library                             **;
 
 **===========================================================================**;
 ** if enrollee has any of these ICD10 diags and certain HHS_HCCs, it might   **;
 ** indicate a bundled claim -- mother diagnoses                              **;
-** uses format $BY&yy2.M from the format library                             **;
+** uses format $BY&yy1.M from the format library                             **;
 
 **===========================================================================**;
 ** internal macros                                                           **;
@@ -329,7 +330,7 @@ RXC_01 RXC_02 RXC_03 RXC_04 RXC_05 RXC_06 RXC_07 RXC_08 RXC_09 RXC_10
 %mend RXC_MODEL_LIST;
 
 **===========================================================================**;
-** RXCs, all, Intercations list (13)                                                **;
+** RXCs, all, Interactions list (13)                                                **;
 %macro RXC_INT_LIST;
 RXC_01_x_HCC001
 RXC_02_x_HCC037_1_036_035_034 
@@ -1325,8 +1326,8 @@ end;
 else if CC="9999" then do; 
  ** some diagnoses get multiple CCs **;
  ** CC creation depends on ICD version code **;
- ** CC creation uses a separate format for 2019 fiscal year and 2020 fiscal year **;
-if '01JAN2019'd <= Diagnosis_service_date < '01OCT2019'd then do ;
+ ** CC creation uses a separate format for 2020 fiscal year and 2021 fiscal year **;
+if '01JAN2020'd <= Diagnosis_service_date < '01OCT2020'd then do ;
    ** primary assignment **;
    CC = input(left(put(DIAG,$I&VC&&CCFMT0Y1..)),8.); %FIND_IND;
    if 1 <= IND <= dim(_C) then _C(IND)=1;
@@ -1338,7 +1339,7 @@ if '01JAN2019'd <= Diagnosis_service_date < '01OCT2019'd then do ;
    ** for debugging **;
    *file print; *put "Find " DIAG= CC= IND=;
  end ;
- else if '01OCT2019'd <= Diagnosis_service_date <= '31DEC2019'd then do ;  
+ else if '01OCT2020'd <= Diagnosis_service_date <= '31DEC2020'd then do ;  
    ** primary assignment **;
    CC = input(left(put(DIAG,$I&VC&&CCFMT0Y2..)),8.); %FIND_IND;
    if 1 <= IND <= dim(_C) then _C(IND)=1;
@@ -1909,12 +1910,12 @@ data &OUTDATA(keep=&IDVAR &KEEPVAR);
     ** ICD10 bundled claim check **;
      ** flag if ICD10 code is on bundled claim list **;
      ** infant with adult maternity diagnoses **;
-     if AGE_LAST = 0 and put(left(DIAG),$BY&yy2.M.)=1 then do;
+     if AGE_LAST = 0 and put(left(DIAG),$BV05CY&yy1.M.)=1 then do;
       ICD10Newborn=2;
       ICD10NewbornDiag=DIAG;
      end;
      ** adult with infant newborn diagnoses **;
-     else if AGE_LAST >= 2 and put(left(DIAG),$BY&yy2.I.)=1 then do;
+     else if AGE_LAST >= 2 and put(left(DIAG),$BV05CY&yy1.I.)=1 then do;
       ICD10Newborn=1;
       ICD10NewbornDiag=DIAG;
      end;
@@ -1926,12 +1927,12 @@ data &OUTDATA(keep=&IDVAR &KEEPVAR);
      ** for debugging **;
      *file print; *put;
     ** check validity of icd codes ;
-      if '01JAN2019'd <= Diagnosis_service_date < '01OCT2019'd then do ;
+      if '01JAN2020'd <= Diagnosis_service_date < '01OCT2020'd then do ;
          _valid = input(left(put(DIAG,$I0&&CCFMT0Y1..)),8.);
          if 1 <= _valid <= dim(_C) then CC ="9999" ;
          else CC="-1.0" ;
        end ;
-       else if '01OCT2019'd <= Diagnosis_service_date <= '31DEC2019'd then do ;
+       else if '01OCT2020'd <= Diagnosis_service_date <= '31DEC2020'd then do ;
          _valid = input(left(put(DIAG,$I0&&CCFMT0Y2..)),8.);
          if 1 <= _valid <= dim(_C) then CC ="9999" ;
          else CC="-1.0" ;
@@ -2136,7 +2137,7 @@ data &OUTDATA(keep=&IDVAR &KEEPVAR);
   METAL = 
     "Enrollee plan level: P[lat.], G[old], S[ilver], B[ronze], C[atastroph.]"
   CSR_INDICATOR =
-    "Enrollees qualified for cost-sharing reductions have values 1-10, else 0"
+    "Enrollees qualified for cost-sharing reductions have values 1-13, else 0"
   ENROLDURATION = 
     "Enrollees months of coverage (1-12)"
 
@@ -2178,7 +2179,7 @@ data &OUTDATA(keep=&IDVAR &KEEPVAR);
   CSR_ADJ_SCR_INFANT_BRONZE =
     "Infant bronze enrollee`s cost-sharing reduction adjusted risk score"
   CSR_ADJ_SCR_INFANT_CATASTROPHIC =
-    "Infant catastroph. enrollee`s cost-sharing reduction adjusted risk score"
+    "Infant catastrophic enrollee`s cost-sharing reduction adjusted risk score"
 
   SCORE_ADULT                = "Adult enrollee`s risk score"
   SCORE_CHILD                = "Child enrollee`s risk score"
@@ -2200,7 +2201,7 @@ data &OUTDATA(keep=&IDVAR &KEEPVAR);
   SCORE_INFANT_GOLD          = "Infant gold enrollee`s risk score"
   SCORE_INFANT_SILVER        = "Infant silver enrollee`s risk score"
   SCORE_INFANT_BRONZE        = "Infant bronze enrollee`s risk score"
-  SCORE_INFANT_CATASTROPHIC  = "Infant catastroph. enrollee`s risk score"
+  SCORE_INFANT_CATASTROPHIC  = "Infant catastrophic enrollee`s risk score"
 
   NumberOfHCCs               = "Number of non-zero HCCs"
 
@@ -2368,4 +2369,4 @@ proc print heading=h u data=&OUTDATA(obs=5);
  id &IDVAR;
  var &KEEPVAR; run;
 
- %mend V0519F3M;
+ %mend V0520F4M;
