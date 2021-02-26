@@ -2,6 +2,7 @@
 This is a resubmission. In this version I have:
 * Changed the version number to 0.2.0
 * Updated datasets for 2020 coefficients
+* Removed the /index from some URLs
 
 ## Test environments
 * local Windows 10 install, R 4.0.2
