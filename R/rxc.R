@@ -20,9 +20,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "ndc_rxc"
 
 #' HCPCS to Rx Condition Crosswalk - Table 10b
@@ -47,9 +47,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "hcpcs_rxc"
 
 #' Rx Condition Hierarchies - Table 11
@@ -73,7 +73,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "rxc_hier"

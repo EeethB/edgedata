@@ -18,9 +18,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_demo"
 
 #' Adult Enrollment Duration Factors - Table 9
@@ -44,9 +44,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_enroll_dur"
 
 #' Adult HCC Factors - Table 9
@@ -71,9 +71,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_hcc"
 
 #' Adult HCC Grouping Factors - Table 9
@@ -98,9 +98,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_group"
 
 #' Adult Interaction Factors - Table 9
@@ -125,9 +125,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_interaction"
 
 #' Adult Rx Condition Factors - Table 9
@@ -153,9 +153,9 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_rxc"
 
 #' Adult RXC/HCC Interaction Factors - Table 9
@@ -184,7 +184,7 @@
 #'
 #' @source
 #' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
+#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw/}
 "adult_rxc_hcc_inter"
