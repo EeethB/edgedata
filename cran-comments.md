@@ -4,8 +4,8 @@ This is a resubmission. In this version I have:
 * Updated datasets for 2020 coefficients
 
 ## Test environments
-* local Windows 10 install, R 3.6.2
-* Ubuntu (on travis-ci), R 3.6
+* local Windows 10 install, R 4.0.2
+* Ubuntu (on travis-ci), R 4.0
 
 ## R CMD check results
 There were no ERRORs, WARNINGs, or NOTEs
