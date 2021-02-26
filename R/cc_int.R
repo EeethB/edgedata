@@ -24,6 +24,10 @@
 #'
 #' A dataset containing the mapping from HCC to interaction group "M".
 #'
+#' Interaction group H (high?) takes priority over interaction group M
+#' (moderate?). If a member qualifies for group H, they should not get credit
+#' for group M.
+#'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
 #'   7 rows and 3 columns
@@ -45,6 +49,10 @@
 #' HCC to interaction group "H" mapping - Table 6
 #'
 #' A dataset containing the mapping from HCC to interaction group "H".
+#'
+#' Interaction group H (high?) takes priority over interaction group M
+#' (moderate?). If a member qualifies for group H, they should not get credit
+#' for group M.
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with

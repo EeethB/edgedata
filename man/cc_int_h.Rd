@@ -25,6 +25,11 @@ cc_int_h
 \description{
 A dataset containing the mapping from HCC to interaction group "H".
 }
+\details{
+Interaction group H (high?) takes priority over interaction group M
+(moderate?). If a member qualifies for group H, they should not get credit
+for group M.
+}
 \seealso{
 Other Severe interaction tables: 
 \code{\link{cc_int_m}},
