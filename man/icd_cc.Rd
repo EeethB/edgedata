@@ -4,7 +4,8 @@
 \name{icd_cc}
 \alias{icd_cc}
 \title{ICD to Condition Category Crosswalk - Table 3}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 8528 rows and 11 columns
 \describe{
 \item{icd}{ICD-10 code}
@@ -21,12 +22,13 @@ currently only supports male and female)}
 maternity, which is not used in actual score calculations}
 \item{age_min}{Minimum age for a given diagnosis code}
 \item{age_max}{Maximum age for a given diagnosis code}
-}}
+}
+}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/master/data-raw}
 }
 \usage{
 icd_cc

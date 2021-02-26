@@ -4,18 +4,20 @@
 \name{hcpcs_rxc}
 \alias{hcpcs_rxc}
 \title{HCPCS to Rx Condition Crosswalk - Table 10b}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 43 rows and 3 columns
 \describe{
 \item{rxc}{Rx condition number without leading zeroes}
 \item{desc}{Rx condition description}
 \item{ndc}{HCPCS code that maps to \code{rxc}}
-}}
+}
+}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/master/data-raw}
 }
 \usage{
 hcpcs_rxc

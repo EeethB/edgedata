@@ -4,7 +4,8 @@
 \name{adult_demo}
 \alias{adult_demo}
 \title{Adult Demographic Factors - Table 9}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 18 rows and 9 columns
 \describe{
 \item{used}{Whether or not the category is used in the RA model}
@@ -12,12 +13,13 @@
 metal level}
 \item{sex}{Male/Female demographic category}
 \item{age_min, age_max}{Maximum and minimum age for each risk score}
-}}
+}
+}
 \source{
 Most recent DIY entry at:
 \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/master/data-raw}
 }
 \usage{
 adult_demo
