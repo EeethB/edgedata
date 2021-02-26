@@ -1,6 +1,3 @@
-# Not currently used
-# I think processing this table will be better done in edgediy
-
 library(readr)
 library(dplyr)
 library(stringr)
