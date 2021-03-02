@@ -1,10 +1,11 @@
 Package: edgedata
 Type: Package
 Title: Datasets that Support the EDGE Server DIY Logic
-Version: 0.2.0
+Version: 1.0.0
 Authors@R: person("Ethan", "Brockmann",
     email = "ethanbrockmann@gmail.com", role = c("aut", "cre", "cph"))
-Description: Datasets from most recent CCIIO DIY entry
+Description: Datasets from most recent Center for Consumer Information and
+  Insurance Oversight (CCIIO) DIY entry
   in a tidy format. These support the Centers for Medicare and Medicaid
   Services' (CMS) risk adjustment Do-It-Yourself (DIY) process, which allows
   health insurance issuers to calculate member risk profiles under the Health
