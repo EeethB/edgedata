@@ -31,6 +31,8 @@ cc_hier <- tbl4 %>%
     values_to = "set_0"
   ) %>%
   filter(!is.na(set_0)) %>%
-  select(-name)
+  select(-name) %>%
+  mutate(across(c(cc, set_0), ~str_pad(str_replace(.x, "37_", "037_"),
+                                       3, side = "left", pad = "0")))
 
 usethis::use_data(cc_hier, overwrite = TRUE)

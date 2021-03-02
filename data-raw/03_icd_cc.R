@@ -55,6 +55,8 @@ icd_cc <- tbl3 %>%
     age_specs,
     by = c("icd" = "icd")
   ) %>%
-  ungroup()
+  ungroup() %>%
+  mutate(cc = str_pad(str_replace(cc, "37_", "037_"),
+                      3, side = "left", pad = "0"))
 
 usethis::use_data(icd_cc, overwrite = TRUE)
