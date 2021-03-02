@@ -1,7 +1,7 @@
 # EDGE DIY Data
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/arcticondor/edgedata.svg?branch=master)](https://travis-ci.org/EeethB/edgedata)
+[![Travis build status](https://travis-ci.org/EeethB/edgedata.svg?branch=main)](https://travis-ci.org/EeethB/edgedata)
 <!-- badges: end -->
 
 ## Installation
