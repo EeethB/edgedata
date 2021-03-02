@@ -1,1 +1,0 @@
-* Pad CCs/RXCs to 3 chars
