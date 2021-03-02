@@ -4,7 +4,8 @@
 \name{cpt_hcpcs}
 \alias{cpt_hcpcs}
 \title{RA-eligible CPT and HCPCS - Table 2}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 6557 rows and 8 columns
 \describe{
 \item{code}{CPT/HCPCS code}
@@ -12,12 +13,11 @@
 \item{prior}{Whether or not the code was valid in the prior benefit year}
 \item{curr}{Whether or not the code is valid in the current benefit year}
 \item{footnote}{Any footnotes included in the CMS DIY file}
-}}
+}
+}
 \source{
-Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 }
 \usage{
 cpt_hcpcs

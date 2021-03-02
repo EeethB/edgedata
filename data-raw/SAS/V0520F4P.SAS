@@ -1,5 +1,5 @@
 *******************************************************************************;
-* This distribution is:       V0519.128.P2, December 2019
+* This distribution is:       V0520.128.Q2, December 2020
 *******************************************************************************;
 
 *******************************************************************************
@@ -44,7 +44,7 @@ options dkricond=error dkrocond=error;
 
 %let runday=%sysfunc(today(),date9.);
 %let runtime=%sysfunc(time(),hhmm7.);
-%let PROGRAM=%str(V0519F3P.SAS);
+%let PROGRAM=%str(V0520F4P.SAS);
 
 options compress=YES;
 
@@ -57,7 +57,7 @@ footnote;
 
  ***********************************************************************
  * 
- * Program V0519F3P creates 128 0/1 payment model HHS HCC variables,
+ * Program V0520F4P creates 128 0/1 payment model HHS HCC variables,
  * 10 RXC variables, and a set of score variables for each enrollee 
  * in the PERSON SAS dataset (provided by the user).
  *
@@ -140,9 +140,9 @@ footnote;
  *  If an enrollee has N HCPC codes, s/he will have N records in the HCPCS dataset. If an
  *  enrollee has no HCPC codes, s/he will have zero records in the HCPCS dataset.
  *
- *  V0519F3P passes parameters to main macro V0519F3M, which calls various internal and
+ *  V0520F4P passes parameters to main macro V0520F4M, which calls various internal and
  *    external macros. (A macro is a program fragment.) External macros are:
- *  I0V05ED3 - ICD10 edits based on age and/or sex
+ *  I0V05ED4 - ICD10 edits based on age and/or sex
  *  AGESEXV6 - creates age/sex variables based on AGE_LAST
  *  V05128L1 - assigns labels to HHS HCCs and RXCs
  *  V05128H1 - sets selected HHS HCCs to zero based on hierarchical relationships
@@ -159,14 +159,14 @@ footnote;
  *     among releases.
  * Define internal macro variables, formats, internal macros. The
  *     internal macros are least likely to vary among releases.
- * Merge PERSON, DIAGnosis, NDC, and HCPCS datasets, and output one record for each
+ * Merge PERSON, DIAG, NDC, and HCPCS datasets, and output one record for each
  *     enrollee record in the PERSON dataset. Output records must be fully
  *     compliant with validity rules (e.g., SEX must be M/m/F/f/1/2).
  *     Exceptions are ignored. Warning messages are generated for some 
  *     exceptions.
  * Declare lengths, retained variables, arrays
  * Append calibration coefficients
- * Merge PERSON, DIAGnosis, NDC, and HCPCS datasets by &IDVAR
+ * Merge PERSON, DIAG, NDC, and HCPCS datasets by &IDVAR
  * If there are any diagnoses for an enrollee:
  *   - perform ICD10 edits
  *   - create additional (multiple) CCs for selected diagnoses
@@ -184,16 +184,16 @@ footnote;
  * The user provides four SAS datasets with the variables described above,
  * each sorted by &IDVAR, and sets the following parameters in the macro call:
  *  INP      - SAS input PERSON SAS dataset
- *  IND      - SAS input DIAGnosis SAS dataset
+ *  IND      - SAS input DIAG SAS dataset
  *  INN      - SAS input NDC SAS dataset
  *  INH      - SAS input HCPCS SAS dataset
  *  OUTDATA  - SAS output SAS dataset
  *  IDVAR    - name of enrollee ID variable (e.g., Medicare HICNO)
  *  KEEPVAR  - variables in output dataset in addition to &IDVAR
- *  CCFMT0Y1 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for fiscal year 2019
- *  CCFMT0Y2 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for fiscal year 2020 
- *  RXCFMTN  - pointer to SAS formats that crosswalk NDC to RXC for calendar year 2019
- *  RXCFMTH  - pointer to SAS formats that crosswalk HCPCS to RXC for calendar year 2019
+ *  CCFMT0Y1 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for fiscal year 2020
+ *  CCFMT0Y2 - pointer to SAS formats that crosswalk ICD10s to HHS CCs for fiscal year 2021 
+ *  RXCFMTN  - pointer to SAS formats that crosswalk NDC to RXC for calendar year 2020
+ *  RXCFMTH  - pointer to SAS formats that crosswalk HCPCS to RXC for calendar year 2020
  *  AGEFMT0  - pointer to SAS formats that crosswalk ICD10s to acceptable 
  *             age range in case age-related edits are to be performed
  *  SEXFMT0  - pointer to SAS format that crosswalks ICD10s to acceptable 
@@ -216,15 +216,15 @@ proc delete data=work._all_; run;
 %let CV=05;
 
 ** year, embedded in format names **;
-%let YY0=18; 
-%let YY1=19; 
-%let YY2=20; 
+%let YY0=19; 
+%let YY1=20; 
+%let YY2=21; 
 
 ** load and run primary macro **;
-%inc IN0("V0519F3M.SAS") / source2;
+%inc IN0("V0520F4M.SAS") / source2;
 
 **==========================================================================================**;
-** V0519F3M goes here when testing macros inline;
+** V0520F4M goes here when testing macros inline;
 **==========================================================================================**;
 
 **==============================================================================**;
@@ -293,7 +293,7 @@ proc delete data=work._all_; run;
 
 ** user provides parameters below **;
 
-%V0519F3M( INP      = IN1.PERSON,
+%V0520F4M( INP      = IN1.PERSON,
            IND      = IN2.DIAG,
            INN      = IN3.NDC,
            INH      = IN4.HCPCS,
@@ -310,10 +310,10 @@ proc delete data=work._all_; run;
                       /*_ALL_*/,
            CCFMT0Y1 = HHS_V&CV.Y&YY1.OC,
            CCFMT0Y2 = HHS_V&CV.Y&YY2.OC,
-           RXCFMTN  = NDCV&YY1.11_RXCV5_3F,
-           RXCFMTH  = HCPC&YY1.11_RXCV5_3F,
-           AGEFMT0  = I0AGEY&YY2.MCE,
-           SEXFMT0  = I0SEXY&YY2.MCE
+           RXCFMTN  = NDCV&YY1.10_RXCV6_3F,
+           RXCFMTH  = HCPC&YY1.10_RXCV6_3F,
+           AGEFMT0  = I0AGECY&YY1.MCE,
+           SEXFMT0  = I0SEXCY&YY1.MCE
          ); run;
 
 ** end **;

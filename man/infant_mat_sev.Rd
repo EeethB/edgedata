@@ -4,7 +4,8 @@
 \name{infant_mat_sev}
 \alias{infant_mat_sev}
 \title{Infant Maturity/Severity Factors - Table 9}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 25 rows and 8 columns
 \describe{
 \item{mat}{Infant maturity level. Can be extremely immature, immature,
@@ -13,12 +14,11 @@ premature multiples, term, or age 1}
 \item{used}{Whether or not the category is used in the RA model}
 \item{plat, gold, silver, bronze, cat}{Maturity/severity risk score for
 each metal level}
-}}
+}
+}
 \source{
-Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 }
 \usage{
 infant_mat_sev

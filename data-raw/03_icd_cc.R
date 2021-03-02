@@ -5,38 +5,28 @@ library(lubridate)
 library(tidyr)
 
 ## Table 3
-tbl3_19 <- read_tsv(
-  "./data-raw/SAS/H0520F1.FY 2019 ICD10.txt",
-  col_names = c("icd", "cc", "class"),
-  col_types = "ccc"
-) %>%
-  mutate(
-    eff_date = ymd("2018-10-01"),
-    term_date = ymd("2019-09-30")
-  )
+import_icd10 <- function(icd10_path) {
+  icd_year <- str_extract(icd10_path, "(?<=FY)[[0-9]]{4}") %>% as.numeric()
+  eff_date <- ymd(paste(icd_year - 1, "10", "01", sep = "-"))
+  term_date <- ymd(paste(icd_year, "09", "30", sep = "-"))
 
-tbl3_20 <- read_tsv(
-  "./data-raw/SAS/H0520F1.FY 2020 ICD10.txt",
-  col_names = c("icd", "cc", "class"),
-  col_types = "ccc"
-) %>%
-  mutate(
-    eff_date = ymd("2019-10-01"),
-    term_date = ymd("2020-09-30")
-  )
+  read_tsv(
+    icd10_path,
+    col_names = c("icd", "cc", "class"),
+    col_types = "ccc"
+  ) %>%
+    mutate(eff_date = eff_date, term_date = term_date)
+}
 
-tbl3 <- bind_rows(
-  tbl3_19,
-  tbl3_20
-) %>%
+tbl3 <- dir("./data-raw/SAS", pattern = "FY[[:digit:]]{4}",
+             full.names = TRUE) %>%
+  purrr::map_dfr(import_icd10) %>%
   group_by(icd, cc, class) %>%
-  summarize(
-    eff_date = min(eff_date),
-    term_date = max(term_date)
-  )
+  summarize(eff_date = min(eff_date), term_date = max(term_date),
+            .groups = "drop")
 
 sex_specs <- read_tsv(
-  "./data-raw/SAS/H0520F1_ICD10_MCE_SEX.txt",
+  dir("./data-raw/SAS", pattern = "MCE_SEX", full.names = TRUE),
   col_names = c("icd", "sex"),
   col_types = "cc"
 ) %>%
@@ -46,15 +36,15 @@ sex_specs <- read_tsv(
   )
 
 age_specs <- read_tsv(
-  "./data-raw/SAS/H0520F1_ICD10_MCE_AGE.txt",
+  dir("./data-raw/SAS", pattern = "MCE_AGE", full.names = TRUE),
   col_names = c("icd", "specs"),
   col_types = "cc"
 ) %>%
   separate(
     col = "specs",
-    into = c("model_num", "model", "age", "age_min", "age_max")
+    into = c("model_num", "model", "age", "age_min", "age_max", "other")
   ) %>%
-  select(-age)
+  select(-age, -other)
 
 icd_cc <- tbl3 %>%
   left_join(

@@ -4,19 +4,19 @@
 \name{adult_enroll_dur}
 \alias{adult_enroll_dur}
 \title{Adult Enrollment Duration Factors - Table 9}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 11 rows and 7 columns
 \describe{
 \item{used}{Whether or not the category is used in the RA model}
 \item{plat, gold, silver, bronze, cat}{Enrollment duration risk score for
 each metal level}
 \item{months}{Number of enrollment months for each risk score}
-}}
+}
+}
 \source{
-Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 }
 \usage{
 adult_enroll_dur

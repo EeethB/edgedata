@@ -17,10 +17,8 @@
 #' @family factors
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "infant_demo"
 
 #' Infant Maturity/Severity Factors - Table 9
@@ -47,8 +45,6 @@
 #' @family factors
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "infant_mat_sev"

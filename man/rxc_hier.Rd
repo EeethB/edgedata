@@ -4,19 +4,19 @@
 \name{rxc_hier}
 \alias{rxc_hier}
 \title{Rx Condition Hierarchies - Table 11}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
 1 rows and 3 columns
 \describe{
 \item{rxc}{Rx condition code without leading zeroes}
 \item{desc}{Rx condition code description}
 \item{set_0}{Rx condition code that falls below \code{rxc} on the hierarchy
 No leading zeroes}
-}}
+}
+}
 \source{
-Most recent DIY entry at:
-\url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 Data import and cleaning at:
-\url{https://github.com/ArctiCondor/edgedata/tree/master/data-raw}
+\url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 }
 \usage{
 rxc_hier

@@ -638,6 +638,8 @@ O99834	2 female
 O99835	2 female
 O99844	2 female
 O99845	2 female
+O99892	2 female
+O99893	2 female
 O9A12	2 female
 O9A13	2 female
 O9A22	2 female

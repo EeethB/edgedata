@@ -22,10 +22,8 @@
 #' @family HCC tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "cpt_hcpcs"
 
 #' ICD to Condition Category Crosswalk - Table 3
@@ -61,10 +59,8 @@
 #' @family HCC tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "icd_cc"
 
 #' Condition Category Hierarchies - Table 4
@@ -87,8 +83,6 @@
 #' @family HCC tables
 #'
 #' @source
-#' Most recent DIY entry at:
-#' \url{https://www.cms.gov/cciio/Resources/Regulations-and-Guidance/index} \cr
 #' Data import and cleaning at:
-#' \url{https://github.com/EeethB/edgedata/tree/master/data-raw}
+#' \url{https://github.com/EeethB/edgedata/tree/main/data-raw}
 "cc_hier"
