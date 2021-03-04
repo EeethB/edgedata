@@ -18,6 +18,14 @@ You can also get the development version from Github:
 remotes::install_github("EeethB/edgedata")
 ```
 
+Specific versions can be installed from Github using their tags. For example, the final version using 2019 coefficients is `v0.1.0`:
+
+```
+remotes::install_github("EeethB/edgedata@v0.1.0")
+```
+
+See below for a table of versions corresponding to benefit years.
+
 ## Summary
 
 An R package containing the data that supports the CMS External Data Gathering Environment (EDGE) Server DIY algorithm
@@ -31,3 +39,12 @@ The risk adjustment (RA) program was implemented to mitigate the risk of adverse
 The Centers for Medicare and Medicaid Services (CMS) requires that issuers maintain an External Data Gathering Environment (EDGE) Server for RA. Data on the EDGE Servers is used to ultimately calculate the RA transfer payments. In order for issuers to QA EDGE submissions and to have a more transparent process to troubleshoot, CMS provides the EDGE DIY software, which allows issuers to calculate their risk score separately from the normal EDGE process.
 
 The software is provided only in SAS format, and this package is the start of implementing it in R. This package provides the datasets used to support the DIY software.
+
+## Versions
+
+Each new benefit year comes with a minor version update, and intra-year updates will typically get a patch version update:
+
+| Benefit Year | Tag    |
+| ------------ | ------ |
+| 2019         | v0.1.0 |
+| 2020         | v0.2.0 |
