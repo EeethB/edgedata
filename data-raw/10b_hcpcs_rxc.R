@@ -19,6 +19,7 @@ colnames(tbl10b) <- c(
 )
 
 hcpcs_rxc <- tbl10b %>%
-  filter(str_length(rxc) <= 3)
+  filter(str_length(rxc) <= 3) %>%
+  mutate(str_pad(rxc, 2, "left", "0"))
 
 usethis::use_data(hcpcs_rxc, overwrite = TRUE)

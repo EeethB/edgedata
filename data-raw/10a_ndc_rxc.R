@@ -19,6 +19,7 @@ colnames(tbl10a) <- c(
 )
 
 ndc_rxc <- tbl10a %>%
-  filter(str_length(rxc) <= 3)
+  filter(str_length(rxc) <= 3) %>%
+  mutate(rxc = str_pad(rxc, 2, side = "left", pad = "0"))
 
 usethis::use_data(ndc_rxc, overwrite = TRUE)

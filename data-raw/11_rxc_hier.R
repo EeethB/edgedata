@@ -31,6 +31,7 @@ rxc_hier <- tbl11 %>%
     values_to = "set_0"
   ) %>%
   filter(!is.na(set_0)) %>%
-  select(-name)
+  select(-name) %>%
+  mutate(across(c(rxc, set_0), ~str_pad(.x, 2, "left", "0")))
 
 usethis::use_data(rxc_hier, overwrite = TRUE)
