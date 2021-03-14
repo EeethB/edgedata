@@ -27,3 +27,5 @@ RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Depends:
   R (>= 4.0)
+Imports:
+  pillar (>= 1.5.1)
