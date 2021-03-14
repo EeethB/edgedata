@@ -24,6 +24,8 @@ colnames(tbl9) <- c(
   "cat"
 )
 
+metal_levels <- c("cat", "bronze", "silver", "gold", "plat")
+
 tbl9_grp <- tbl9 %>%
   filter(!is.na(model)) %>%
   mutate(
@@ -39,6 +41,8 @@ tbl9_grp <- tbl9 %>%
       TRUE ~ "other"
     )
   ) %>%
+  pivot_longer(plat:cat, names_to = "metal", values_to = "coef") %>%
+  mutate(metal = factor(metal, levels = metal_levels)) %>%
   group_by(model, var_type)
 
 group_list <- group_split(tbl9_grp)
