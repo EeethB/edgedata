@@ -5,11 +5,11 @@
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-#'   2 rows and 8 columns
+#'   5 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
-#'   \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
-#'                                          metal level}
+#'   \item{metal}{Plan metal level (Benefit richness)}
+#'   \item{coef}{Demographic risk score coefficient}
 #'   \item{age}{Age for each risk score}
 #'   \item{sex}{Male/Female demographic category}
 #' }
@@ -32,14 +32,14 @@
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-#'   25 rows and 8 columns
+#'   5 columns
 #' \describe{
 #'   \item{mat}{Infant maturity level. Can be extremely immature, immature,
 #'              premature multiples, term, or age 1}
 #'   \item{sev}{Infant severity level. 1-5}
 #'   \item{used}{Whether or not the category is used in the RA model}
-#'   \item{plat, gold, silver, bronze, cat}{Maturity/severity risk score for
-#'                                          each metal level}
+#'   \item{metal}{Plan metal level (Benefit richness)}
+#'   \item{coef}{Maturity/severity risk score coefficient}
 #' }
 #'
 #' @family factors

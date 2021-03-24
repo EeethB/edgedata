@@ -5,11 +5,11 @@
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-#'   8 rows and 9 columns
+#'   6 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
-#'   \item{plat, gold, silver, bronze, cat}{Demographic risk score for each
-#'                                          metal level}
+#'   \item{metal}{Plan metal level (Benefit richness)}
+#'   \item{coef}{Demographic risk score coefficient}
 #'   \item{sex}{Male/Female demographic category}
 #'   \item{age_min, age_max}{Maximum and minimum age for each risk score}
 #' }
@@ -30,11 +30,11 @@
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-#'   128 rows and 7 columns
+#'   4 columns
 #' \describe{
 #'   \item{used}{Whether or not the category is used in the RA model}
-#'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
-#'                                          metal level}
+#'   \item{metal}{Plan metal level (Benefit richness)}
+#'   \item{coef}{HCC grouping risk score coefficient}
 #'   \item{hcc}{HCC label for risk scores (Includes leading zeroes)}
 #' }
 #'
@@ -55,12 +55,12 @@
 #'
 #' @format
 #' An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-#'   17 rows and 7 columns
+#'   4 columns
 #' \describe{
 #'   \item{group}{Group label for risk scores}
 #'   \item{used}{Whether or not the category is used in the RA model}
-#'   \item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
-#'                                          metal level}
+#'   \item{metal}{Plan metal level (Benefit richness)}
+#'   \item{coef}{HCC grouping risk score coefficient}
 #' }
 #'
 #' @family factors

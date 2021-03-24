@@ -6,14 +6,14 @@
 \title{Infant Maturity/Severity Factors - Table 9}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
-25 rows and 8 columns
+5 columns
 \describe{
 \item{mat}{Infant maturity level. Can be extremely immature, immature,
 premature multiples, term, or age 1}
 \item{sev}{Infant severity level. 1-5}
 \item{used}{Whether or not the category is used in the RA model}
-\item{plat, gold, silver, bronze, cat}{Maturity/severity risk score for
-each metal level}
+\item{metal}{Plan metal level (Benefit richness)}
+\item{coef}{Maturity/severity risk score coefficient}
 }
 }
 \source{

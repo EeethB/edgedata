@@ -6,11 +6,11 @@
 \title{Infant Demographic Factors - Table 9}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
-2 rows and 8 columns
+5 columns
 \describe{
 \item{used}{Whether or not the category is used in the RA model}
-\item{plat, gold, silver, bronze, cat}{Demographic risk score for each
-metal level}
+\item{metal}{Plan metal level (Benefit richness)}
+\item{coef}{Demographic risk score coefficient}
 \item{age}{Age for each risk score}
 \item{sex}{Male/Female demographic category}
 }

@@ -10,8 +10,8 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 \describe{
 \item{group}{Group label for risk scores}
 \item{used}{Whether or not the category is used in the RA model}
-\item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
-metal level}
+\item{metal}{Plan metal level (Benefit richness)}
+\item{coef}{HCC grouping risk score coefficient}
 }
 }
 \source{

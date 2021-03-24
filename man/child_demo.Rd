@@ -6,11 +6,11 @@
 \title{Child Demographic Factors - Table 9}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
-8 rows and 9 columns
+6 columns
 \describe{
 \item{used}{Whether or not the category is used in the RA model}
-\item{plat, gold, silver, bronze, cat}{Demographic risk score for each
-metal level}
+\item{metal}{Plan metal level (Benefit richness)}
+\item{coef}{Demographic risk score coefficient}
 \item{sex}{Male/Female demographic category}
 \item{age_min, age_max}{Maximum and minimum age for each risk score}
 }

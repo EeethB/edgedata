@@ -6,11 +6,11 @@
 \title{Adult RXC/HCC Interaction Factors - Table 9}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with
-32 rows and 8 columns
+5 columns
 \describe{
 \item{used}{Whether or not the category is used in the RA model}
-\item{plat, gold, silver, bronze, cat}{HCC grouping risk score for each
-metal level}
+\item{metal}{Plan metal level (Benefit richness)}
+\item{coef}{HCC grouping risk score coefficient}
 \item{rxc}{RXC label for risk scores (Includes leading zeroes)}
 \item{hcc}{HCC label for risk scores (Includes leading zeroes)}
 }
