@@ -4,9 +4,9 @@
 
 # child HCC coefficients
 
-    640
+    650
 
 # child group coefficients
 
-    85
+    105
 

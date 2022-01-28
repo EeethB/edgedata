@@ -1,7 +1,7 @@
 Package: edgedata
 Type: Package
 Title: Datasets that Support the EDGE Server DIY Logic
-Version: 1.0.0
+Version: 0.3.0.9000
 Authors@R: person("Ethan", "Brockmann",
     email = "ethanbrockmann@gmail.com", role = c("aut", "cre", "cph"))
 Description: Datasets from most recent Center for Consumer Information and

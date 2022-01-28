@@ -1,6 +1,6 @@
 # ICD-CC mapping
 
-    8598
+    11755
 
 # CC-INT-H mapping
 
@@ -16,9 +16,9 @@
 
 # HCPCS-RXC mapping
 
-    40
+    35
 
 # NDC-RXC mapping
 
-    12616
+    11597
 

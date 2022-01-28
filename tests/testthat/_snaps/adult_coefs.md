@@ -8,15 +8,15 @@
 
 # adult HCC coefficients
 
-    640
+    655
 
 # adult group coefficients
 
-    85
+    90
 
 # adult interaction coefficients
 
-    10
+    5
 
 # adult RXC coefficients
 
@@ -24,5 +24,5 @@
 
 # adult RXC/HCC interaction coefficients
 
-    160
+    165
 

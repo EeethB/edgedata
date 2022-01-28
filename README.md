@@ -48,3 +48,4 @@ Each new benefit year comes with a minor version update, and intra-year updates 
 | ------------ | ------ |
 | 2019         | v0.1.0 |
 | 2020         | v0.2.0 |
+| 2021         | v0.3.0 |
