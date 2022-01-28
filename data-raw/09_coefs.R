@@ -9,7 +9,7 @@ source("./data-raw/00_tables_path.R")
 ## Table 9
 tbl9 <- read_excel(
   tbl_path,
-  sheet = "Table 9",
+  sheet = "Table 9 ",
   range = "A3:H500"
 )
 
