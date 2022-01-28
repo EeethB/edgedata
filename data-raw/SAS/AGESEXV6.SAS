@@ -22,7 +22,7 @@
   _AGE_SEX(i)=0;
  end;
 
- ** upper case imposed in MAIN, M/F/1/2 acceptable **;
+ ** upper case imposed in main macro, M/F/1/2 acceptable **;
  if SEX in("M","1") then do;
   select;
    when (      AGE_LAST =   0) do;

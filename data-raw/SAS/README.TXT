@@ -25,41 +25,41 @@ using the following parameters:  RECFM(F or FB) LRECL(80) BLKSIZE(8000).
 Program components (SAS code):
 
 1.	AGESEXV6.SAS
-2.	I0V05ED4.SAS
+2.	I0V07ED1.SAS
 3.	SCOREV4.SAS
-4.	V05128H1.SAS
-5.	V05128L1.SAS
-6.	V0520F4M.SAS
-7.	V0520F4P.SAS – main program
+4.	V07141H1.SAS
+5.	V07141L1.SAS
+6.	CY21M07B.SAS
+7.	CY21P07B.SAS – main program
 
 Text versions of program components (ASCII text):
 
 8.	AGESEXV6.TXT
-9.	I0V05ED4.TXT
+9.	I0V07ED1.TXT
 10.	SCOREV4.TXT
-11.	V05128H1.TXT
-12.	V05128L1.TXT
-13.	V0520F4M.TXT
-14.	V0520F4P.TXT
+11.	V07141H1.TXT
+12.	V07141L1.TXT
+13.	CY21M07B.TXT
+14.	CY21P07B.TXT
 
 Calibration coefficients (SAS transport file):
 
-15.	C0520T4.TRN
+15.	CY21C07A.TRN
 
 Diagnosis-to-CC crosswalks (SAS transport file containing SAS formats):
 
-16.	H0520F4.TRN
+16.	CY21F07B.TRN
 
 Text versions of diagnosis-to-CC crosswalks:
 
-17.  H0520F4_FY2020_ICD10.TXT
-18.  H0520F4_FY2021_ICD10.TXT
-19.  H0520F4_ICD10_MCE_AGE.TXT
-20.  H0520F4_ICD10_MCE_SEX.TXT
-21.  H0520F4_ICD10_BUNDLED_MOTHER.TXT
-22.  H0520F4_ICD10_BUNDLED_INFANT.TXT
-23.  H0520F4_HCPCS6_3_20_10.TXT
-24.  H0520F4_NDC6_3_20_10.TXT
+17.  CY21F07B_FY2021_ICD10.TXT
+18.  CY21F07B_FY2022_ICD10.TXT
+19.  CY21F07B_ICD10_MCE_AGE.TXT
+20.  CY21F07B_ICD10_MCE_SEX.TXT
+21.  CY21F07B_ICD10_BUNDLED_MOTHER.TXT
+22.  CY21F07B_ICD10_BUNDLED_INFANT.TXT
+23.  CY21F07B_HCPCS7_3_21_10.TXT
+24.  CY21F07B_NDC7_3_21_10.TXT
 
 Sample program to read SAS transport files (SAS and text versions):
 
@@ -68,5 +68,5 @@ Sample program to read SAS transport files (SAS and text versions):
 
 Documentation:
 
-27.	Word file for this release
-28.	Excel file for this release
+26.	Word file for this release
+27.	Excel file for this release
