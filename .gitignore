@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 README.html
+edgedata.Rcheck/
+edgedata*.tar.gz
+edgedata*.tgz

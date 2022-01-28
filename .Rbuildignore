@@ -8,3 +8,6 @@
 ^CRAN-RELEASE$
 ^to-do\.md$
 ^cran-response\.md$
+^edgedata\.Rcheck$
+^edgedata.*\.tar\.gz$
+^edgedata.*\.tgz$
