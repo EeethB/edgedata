@@ -56,7 +56,9 @@ icd_cc <- tbl3 %>%
     by = c("icd" = "icd")
   ) %>%
   ungroup() %>%
-  mutate(cc = str_pad(str_replace(cc, "37_", "037_"),
-                      3, side = "left", pad = "0"))
+  mutate(cc_base = str_pad(str_extract(cc, "[0-9]{1,3}"),
+                           3, side = "left", pad = "0"),
+         cc_num = str_replace(cc, "[0-9]{1,3}([[:punct:]])?", ""),
+         cc = trimws(paste(cc_base, cc_num, sep = "_"), "right", "_"))
 
 usethis::use_data(icd_cc, overwrite = TRUE)
