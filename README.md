@@ -40,6 +40,8 @@ The Centers for Medicare and Medicaid Services (CMS) requires that issuers maint
 
 The software is provided only in SAS format, and this package is the start of implementing it in R. This package provides the datasets used to support the DIY software.
 
+Location of DIY software updates: https://www.cms.gov/CCIIO/Resources/Regulations-and-Guidance
+
 ## Versions
 
 Each new benefit year comes with a minor version update, and intra-year updates will typically get a patch version update:
